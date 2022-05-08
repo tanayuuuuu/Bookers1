@@ -11,7 +11,7 @@ class BooksController < ApplicationController
       flash[:notice] = "successfully"
       redirect_to book_path(@book.id)
     else
-      flash.now[:alert] = "false"
+      flash[:alert] = "false"
       @books = Book.all
       render :index
     end
@@ -36,7 +36,7 @@ class BooksController < ApplicationController
        flash[:notice] = "Book was successfully updated."
        redirect_to book_path(@book.id)
     else
-      flash.now[:alert] = "false"
+      flash[:alert] = "false"
       @books = Book.all
       render :show
     end
